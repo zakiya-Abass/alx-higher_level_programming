@@ -1,19 +1,29 @@
 #!/usr/bin/python3
-""" Defines function - add_integer
-    Raises:
-        TypeError: if a / b is not an int / float
+"""
+Module 0-add_integer
+Adds two Integers/Floats and
+returns the sum
 """
 
 
 def add_integer(a, b=98):
-    """ Returns the sum of ints a and b
-        If a / b is a float, typecast to an integer """
+    """ adds a and b
+    Args:
+        a (int)
+        b (int, optional): Default to 98.
+    Raises:
+        TypeError: a and b must be an integer
+    Returns:
+        int: sum of a and b
+    """
 
-    if not isinstance(a, (int, float)):
+    if not isinstance(a, int) and not isinstance(a, float):
         raise TypeError("a must be an integer")
-
-    if not isinstance(b, (int, float)):
+    if not isinstance(b, int) and not isinstance(b, float):
         raise TypeError("b must be an integer")
+    if type(a) is float:
+        a = int(a)
+    if type(b) is float:
+        b = int(b)
 
-    return int(a) + int(b)
-
+    return a + 
